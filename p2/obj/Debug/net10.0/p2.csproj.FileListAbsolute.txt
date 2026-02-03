@@ -1,0 +1,15 @@
+C:\work\p2\bin\Debug\net10.0\p2.exe
+C:\work\p2\bin\Debug\net10.0\p2.deps.json
+C:\work\p2\bin\Debug\net10.0\p2.runtimeconfig.json
+C:\work\p2\bin\Debug\net10.0\p2.dll
+C:\work\p2\bin\Debug\net10.0\p2.pdb
+C:\work\p2\obj\Debug\net10.0\p2.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\p2\obj\Debug\net10.0\p2.AssemblyInfoInputs.cache
+C:\work\p2\obj\Debug\net10.0\p2.AssemblyInfo.cs
+C:\work\p2\obj\Debug\net10.0\p2.csproj.CoreCompileInputs.cache
+C:\work\p2\obj\Debug\net10.0\p2.sourcelink.json
+C:\work\p2\obj\Debug\net10.0\p2.dll
+C:\work\p2\obj\Debug\net10.0\refint\p2.dll
+C:\work\p2\obj\Debug\net10.0\p2.pdb
+C:\work\p2\obj\Debug\net10.0\p2.genruntimeconfig.cache
+C:\work\p2\obj\Debug\net10.0\ref\p2.dll

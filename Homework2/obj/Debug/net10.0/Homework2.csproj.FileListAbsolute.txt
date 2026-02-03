@@ -1,0 +1,15 @@
+C:\work\Homework2\bin\Debug\net10.0\Homework2.exe
+C:\work\Homework2\bin\Debug\net10.0\Homework2.deps.json
+C:\work\Homework2\bin\Debug\net10.0\Homework2.runtimeconfig.json
+C:\work\Homework2\bin\Debug\net10.0\Homework2.dll
+C:\work\Homework2\bin\Debug\net10.0\Homework2.pdb
+C:\work\Homework2\obj\Debug\net10.0\Homework2.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\Homework2\obj\Debug\net10.0\Homework2.AssemblyInfoInputs.cache
+C:\work\Homework2\obj\Debug\net10.0\Homework2.AssemblyInfo.cs
+C:\work\Homework2\obj\Debug\net10.0\Homework2.csproj.CoreCompileInputs.cache
+C:\work\Homework2\obj\Debug\net10.0\Homework2.sourcelink.json
+C:\work\Homework2\obj\Debug\net10.0\Homework2.dll
+C:\work\Homework2\obj\Debug\net10.0\refint\Homework2.dll
+C:\work\Homework2\obj\Debug\net10.0\Homework2.pdb
+C:\work\Homework2\obj\Debug\net10.0\Homework2.genruntimeconfig.cache
+C:\work\Homework2\obj\Debug\net10.0\ref\Homework2.dll

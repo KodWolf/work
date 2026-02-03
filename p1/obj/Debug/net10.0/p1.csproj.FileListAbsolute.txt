@@ -1,0 +1,14 @@
+C:\work\p1\obj\Debug\net10.0\p1.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\p1\obj\Debug\net10.0\p1.AssemblyInfoInputs.cache
+C:\work\p1\obj\Debug\net10.0\p1.AssemblyInfo.cs
+C:\work\p1\obj\Debug\net10.0\p1.csproj.CoreCompileInputs.cache
+C:\work\p1\bin\Debug\net10.0\p1.exe
+C:\work\p1\bin\Debug\net10.0\p1.deps.json
+C:\work\p1\bin\Debug\net10.0\p1.runtimeconfig.json
+C:\work\p1\bin\Debug\net10.0\p1.dll
+C:\work\p1\bin\Debug\net10.0\p1.pdb
+C:\work\p1\obj\Debug\net10.0\p1.dll
+C:\work\p1\obj\Debug\net10.0\refint\p1.dll
+C:\work\p1\obj\Debug\net10.0\p1.pdb
+C:\work\p1\obj\Debug\net10.0\p1.genruntimeconfig.cache
+C:\work\p1\obj\Debug\net10.0\ref\p1.dll

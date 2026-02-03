@@ -6,7 +6,7 @@
         {
             string connectionString = Configuration.ConnectionString;
             Console.WriteLine($"Запись лога в БД: {message}");
-            // Логика записи лога в базу данных
+
         }
     }
 }

@@ -5,7 +5,7 @@
         public void SaveToDatabase(User user)
         {
             Console.WriteLine($"Сохранение пользователя {user.Name} в БД");
-            // Код для сохранения пользователя в базу данных
+
         }
     }
 }

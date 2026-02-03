@@ -11,7 +11,7 @@ namespace DesignPrinciplesDemo
         {
             Console.WriteLine("=== Демонстрация принципов проектирования ===\n");
 
-            // Демонстрация DRY
+
             Console.WriteLine("1. Принцип DRY:");
             var logger = new Logger();
             logger.LogError("Ошибка соединения");
@@ -20,7 +20,7 @@ namespace DesignPrinciplesDemo
             var dbService = new DatabaseService();
             dbService.Connect();
 
-            // Демонстрация KISS
+
             Console.WriteLine("\n2. Принцип KISS:");
             var processor = new SimpleNumberProcessor();
             int[] numbers = { -1, 2, 0, 4, -3 };
@@ -29,7 +29,7 @@ namespace DesignPrinciplesDemo
             Console.WriteLine($"Результат деления: {processor.Divide(10, 2)}");
             Console.WriteLine($"Деление на ноль: {processor.Divide(10, 0)}");
 
-            // Демонстрация YAGNI
+  
             Console.WriteLine("\n3. Принцип YAGNI:");
             var user = new User
             {

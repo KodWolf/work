@@ -6,7 +6,7 @@
         {
             string connectionString = Configuration.ConnectionString;
             Console.WriteLine($"Подключение к БД с строкой: {connectionString}");
-            // Логика подключения к базе данных
+
         }
     }
 }

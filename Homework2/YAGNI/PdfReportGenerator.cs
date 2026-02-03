@@ -5,7 +5,7 @@
         public void Generate()
         {
             Console.WriteLine("Генерация PDF отчета");
-            // Генерация PDF отчета
+
         }
     }
 }

@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\work\\p2\\",
+  "WorkspaceRootPath": "C:\\work\\learn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FAD030E-446B-4C8E-9B82-5F2EBB6BC70F}|p2.csproj|c:\\work\\p2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FAD030E-446B-4C8E-9B82-5F2EBB6BC70F}|p2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E778AFB0-3A4F-4C5D-BAC6-EFCAA8D522B4}|learn.csproj|c:\\work\\learn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E778AFB0-3A4F-4C5D-BAC6-EFCAA8D522B4}|learn.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\work\\p2\\Program.cs",
+              "DocumentMoniker": "C:\\work\\learn\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\work\\p2\\Program.cs",
+              "ToolTip": "C:\\work\\learn\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T16:13:53.849Z",
+              "WhenOpened": "2026-02-04T05:02:56.401Z",
               "EditorCaption": ""
             }
           ]

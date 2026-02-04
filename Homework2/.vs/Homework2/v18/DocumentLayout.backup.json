@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\work\\Homework2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|c:\\work\\homework2\\dry\\loggingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|solutionrelative:dry\\loggingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|c:\\work\\homework2\\dry\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|solutionrelative:dry\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|c:\\work\\homework2\\dry\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|solutionrelative:dry\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|c:\\work\\homework2\\dry\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|solutionrelative:dry\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|c:\\work\\homework2\\kiss\\simplenumberprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|solutionrelative:kiss\\simplenumberprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|c:\\work\\homework2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9606C2D-4C3F-4131-9B22-981D8E759E23}|Homework2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +39,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LoggingService.cs",
+              "DocumentMoniker": "C:\\work\\Homework2\\DRY\\LoggingService.cs",
+              "RelativeDocumentMoniker": "DRY\\LoggingService.cs",
+              "ToolTip": "C:\\work\\Homework2\\DRY\\LoggingService.cs",
+              "RelativeToolTip": "DRY\\LoggingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:21:21.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\work\\Homework2\\DRY\\Logger.cs",
+              "RelativeDocumentMoniker": "DRY\\Logger.cs",
+              "ToolTip": "C:\\work\\Homework2\\DRY\\Logger.cs",
+              "RelativeToolTip": "DRY\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:21:19.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\work\\Homework2\\DRY\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "DRY\\DatabaseService.cs",
+              "ToolTip": "C:\\work\\Homework2\\DRY\\DatabaseService.cs",
+              "RelativeToolTip": "DRY\\DatabaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:21:16.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\work\\Homework2\\DRY\\Configuration.cs",
+              "RelativeDocumentMoniker": "DRY\\Configuration.cs",
+              "ToolTip": "C:\\work\\Homework2\\DRY\\Configuration.cs",
+              "RelativeToolTip": "DRY\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:21:14.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SimpleNumberProcessor.cs",
+              "DocumentMoniker": "C:\\work\\Homework2\\KISS\\SimpleNumberProcessor.cs",
+              "RelativeDocumentMoniker": "KISS\\SimpleNumberProcessor.cs",
+              "ToolTip": "C:\\work\\Homework2\\KISS\\SimpleNumberProcessor.cs",
+              "RelativeToolTip": "KISS\\SimpleNumberProcessor.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T16:21:09.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\work\\Homework2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\work\\Homework2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwDUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwB8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-03T16:01:57.926Z",
               "EditorCaption": ""

@@ -32,7 +32,7 @@ namespace UserManagementSystem.Managers
                 Role = role
             });
 
-            Console.WriteLine($"✅ Пользователь '{name}' добавлен.");
+            Console.WriteLine($" Пользователь '{name}' добавлен.");
         }
 
 
@@ -42,11 +42,11 @@ namespace UserManagementSystem.Managers
             if (user != null)
             {
                 _users.Remove(user);
-                Console.WriteLine($"✅ Пользователь '{user.Name}' удален.");
+                Console.WriteLine($" Пользователь '{user.Name}' удален.");
             }
             else
             {
-                Console.WriteLine($"❌ Пользователь с email {email} не найден.");
+                Console.WriteLine($" Пользователь с email {email} не найден.");
             }
         }
 
@@ -65,11 +65,11 @@ namespace UserManagementSystem.Managers
                 {
                     user.Role = newRole;
                 }
-                Console.WriteLine($"✅ Пользователь обновлен: {user}");
+                Console.WriteLine($" Пользователь обновлен: {user}");
             }
             else
             {
-                Console.WriteLine($"❌ Пользователь с email {email} не найден.");
+                Console.WriteLine($" Пользователь с email {email} не найден.");
             }
         }
 

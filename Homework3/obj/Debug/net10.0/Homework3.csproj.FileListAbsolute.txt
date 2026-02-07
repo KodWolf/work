@@ -1,0 +1,5 @@
+C:\work\Homework3\obj\Debug\net10.0\Homework3.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\Homework3\obj\Debug\net10.0\Homework3.AssemblyInfoInputs.cache
+C:\work\Homework3\obj\Debug\net10.0\Homework3.AssemblyInfo.cs
+C:\work\Homework3\obj\Debug\net10.0\Homework3.csproj.CoreCompileInputs.cache
+C:\work\Homework3\obj\Debug\net10.0\Homework3.sourcelink.json

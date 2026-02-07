@@ -1,270 +1,245 @@
-﻿
-public class Order
+﻿using System;
+using System.Collections.Generic;
+
+#region Order
+
+// SRP: класс отвечает только за данные и логику заказа
+class Order
 {
-    public List<OrderItem> Items { get; } = new List<OrderItem>();
+    private List<OrderItem> items = new List<OrderItem>();
+
     public IPayment Payment { get; set; }
     public IDelivery Delivery { get; set; }
-    public Customer Customer { get; set; }
 
-    public void AddItem(Product product, int quantity)
+    public void AddItem(string name, int quantity, double price)
     {
-        Items.Add(new OrderItem(product, quantity));
+        items.Add(new OrderItem(name, quantity, price));
     }
 
-    public double CalculateTotal()
+    public double GetTotalPrice()
     {
-        return Items.Sum(item => item.Product.Price * item.Quantity);
-    }
+        double total = 0;
 
-    public double CalculateTotalWithDiscount(DiscountCalculator discountCalculator)
-    {
-        double total = CalculateTotal();
-        return discountCalculator.CalculateDiscountedPrice(total);
-    }
+        foreach (var item in items)
+        {
+            total += item.GetTotalPrice();
+        }
 
-    public void ProcessOrder()
-    {
-        Payment.ProcessPayment(CalculateTotal());
-        Delivery.DeliverOrder(this);
+        return total;
     }
 }
 
-public class OrderItem
+class OrderItem
 {
-    public Product Product { get; }
+    public string Name { get; }
     public int Quantity { get; }
+    public double Price { get; }
 
-    public OrderItem(Product product, int quantity)
+    public OrderItem(string name, int quantity, double price)
     {
-        Product = product;
+        Name = name;
         Quantity = quantity;
+        Price = price;
+    }
+
+    public double GetTotalPrice()
+    {
+        return Quantity * Price;
     }
 }
 
-public class Product
-{
-    public string Name { get; set; }
-    public double Price { get; set; }
-}
+#endregion
 
-public class Customer
-{
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string Phone { get; set; }
-}
+#region Payment
 
-public interface IPayment
+// DIP + ISP
+interface IPayment
 {
     void ProcessPayment(double amount);
 }
 
-public class CreditCardPayment : IPayment
+// LSP: любой способ оплаты можно подставить вместо IPayment
+class CreditCardPayment : IPayment
 {
     public void ProcessPayment(double amount)
     {
-        Console.WriteLine($"Оплата картой: {amount} руб.");
+        Console.WriteLine("Оплата картой: " + amount);
     }
 }
 
-public class PayPalPayment : IPayment
+class PayPalPayment : IPayment
 {
     public void ProcessPayment(double amount)
     {
-        Console.WriteLine($"Оплата через PayPal: {amount} руб.");
+        Console.WriteLine("Оплата PayPal: " + amount);
     }
 }
 
-public class BankTransferPayment : IPayment
+class BankTransferPayment : IPayment
 {
     public void ProcessPayment(double amount)
     {
-        Console.WriteLine($"Банковский перевод: {amount} руб.");
+        Console.WriteLine("Банковский перевод: " + amount);
     }
 }
 
-public interface IDelivery
+#endregion
+
+#region Delivery
+
+// DIP + ISP
+interface IDelivery
 {
     void DeliverOrder(Order order);
 }
 
-public class CourierDelivery : IDelivery
+class CourierDelivery : IDelivery
 {
     public void DeliverOrder(Order order)
     {
-        Console.WriteLine($"Доставка курьером для заказа клиента {order.Customer.Name}");
+        Console.WriteLine("Доставка курьером");
     }
 }
 
-public class PostDelivery : IDelivery
+class PostDelivery : IDelivery
 {
     public void DeliverOrder(Order order)
     {
-        Console.WriteLine($"Доставка почтой для заказа клиента {order.Customer.Name}");
+        Console.WriteLine("Доставка почтой");
     }
 }
 
-public class PickUpPointDelivery : IDelivery
+class PickUpPointDelivery : IDelivery
 {
     public void DeliverOrder(Order order)
     {
-        Console.WriteLine($"Самовывоз из пункта выдачи для заказа клиента {order.Customer.Name}");
+        Console.WriteLine("Самовывоз из пункта");
     }
 }
 
-public interface INotification
+#endregion
+
+#region Notification
+
+// ISP
+interface INotification
 {
     void SendNotification(string message);
 }
 
-public class EmailNotification : INotification
+class EmailNotification : INotification
 {
-    private readonly string _email;
-
-    public EmailNotification(string email)
-    {
-        _email = email;
-    }
-
     public void SendNotification(string message)
     {
-        Console.WriteLine($"Email отправлен на {_email}: {message}");
+        Console.WriteLine("Email: " + message);
     }
 }
 
-public class SmsNotification : INotification
+class SmsNotification : INotification
 {
-    private readonly string _phone;
-
-    public SmsNotification(string phone)
-    {
-        _phone = phone;
-    }
-
     public void SendNotification(string message)
     {
-        Console.WriteLine($"SMS отправлено на {_phone}: {message}");
+        Console.WriteLine("SMS: " + message);
     }
 }
 
-public class NotificationService
-{
-    private readonly List<INotification> _notifications = new List<INotification>();
+#endregion
 
-    public void AddNotification(INotification notification)
+#region Discount
+
+// OCP: новые скидки добавляются через новые классы
+interface IDiscountRule
+{
+    double Apply(double total);
+}
+
+class PercentageDiscount : IDiscountRule
+{
+    public double Apply(double total)
     {
-        _notifications.Add(notification);
+        return total * 0.9; // 10% скидка
+    }
+}
+
+class FixedDiscount : IDiscountRule
+{
+    public double Apply(double total)
+    {
+        return total - 500;
+    }
+}
+
+// SRP: только расчет скидок
+class DiscountCalculator
+{
+    private List<IDiscountRule> rules = new List<IDiscountRule>();
+
+    public void AddRule(IDiscountRule rule)
+    {
+        rules.Add(rule);
     }
 
-    public void SendAll(string message)
+    public double Calculate(double total)
     {
-        foreach (var notification in _notifications)
+        double result = total;
+
+        foreach (var rule in rules)
         {
-            notification.SendNotification(message);
+            result = rule.Apply(result);
         }
+
+        return result;
     }
 }
 
-public interface IDiscountStrategy
+#endregion
+
+#region Service
+
+// DIP: зависит только от интерфейсов
+class OrderService
 {
-    double CalculateDiscount(double totalAmount);
-}
+    private readonly INotification notification;
+    private readonly DiscountCalculator discountCalculator;
 
-public class PercentageDiscount : IDiscountStrategy
-{
-    private readonly double _percentage;
-
-    public PercentageDiscount(double percentage)
+    public OrderService(INotification notification, DiscountCalculator discountCalculator)
     {
-        _percentage = percentage;
+        this.notification = notification;
+        this.discountCalculator = discountCalculator;
     }
 
-    public double CalculateDiscount(double totalAmount)
+    public void ProcessOrder(Order order)
     {
-        return totalAmount * (_percentage / 100);
-    }
-}
+        double total = order.GetTotalPrice();
+        double finalPrice = discountCalculator.Calculate(total);
 
-public class FixedAmountDiscount : IDiscountStrategy
-{
-    private readonly double _amount;
+        order.Payment.ProcessPayment(finalPrice);
+        order.Delivery.DeliverOrder(order);
 
-    public FixedAmountDiscount(double amount)
-    {
-        _amount = amount;
-    }
-
-    public double CalculateDiscount(double totalAmount)
-    {
-        return Math.Min(_amount, totalAmount);
+        notification.SendNotification("Заказ оформлен. Итоговая цена: " + finalPrice);
     }
 }
 
-public class DiscountCalculator
-{
-    private readonly List<IDiscountStrategy> _strategies = new List<IDiscountStrategy>();
-
-    public void AddStrategy(IDiscountStrategy strategy)
-    {
-        _strategies.Add(strategy);
-    }
-
-    public double CalculateDiscountedPrice(double totalAmount)
-    {
-        double discount = 0;
-        foreach (var strategy in _strategies)
-        {
-            discount += strategy.CalculateDiscount(totalAmount);
-        }
-        return totalAmount - discount;
-    }
-}
 
 class Program
 {
     static void Main()
     {
-        var product1 = new Product { Name = "Ноутбук", Price = 50000 };
-        var product2 = new Product { Name = "Мышь", Price = 1500 };
+        Order order = new Order();
 
-        var customer = new Customer
-        {
-            Name = "Иван Иванов",
-            Email = "ivan@mail.ru",
-            Phone = "+79991234567"
-        };
-
-        var order = new Order
-        {
-            Customer = customer
-        };
-        order.AddItem(product1, 1);
-        order.AddItem(product2, 1);
+        order.AddItem("Ноутбук", 1, 300000);
+        order.AddItem("Мышь", 1, 5000);
 
         order.Payment = new CreditCardPayment();
         order.Delivery = new CourierDelivery();
 
-        var discountCalculator = new DiscountCalculator();
-        discountCalculator.AddStrategy(new PercentageDiscount(10)); 
-        discountCalculator.AddStrategy(new FixedAmountDiscount(1000)); 
+        DiscountCalculator discountCalculator = new DiscountCalculator();
+        discountCalculator.AddRule(new PercentageDiscount());
 
-        double originalTotal = order.CalculateTotal();
-        double discountedTotal = order.CalculateTotalWithDiscount(discountCalculator);
+        INotification notification = new EmailNotification();
 
-        Console.WriteLine($"Итого без скидок: {originalTotal} руб.");
-        Console.WriteLine($"Итого со скидками: {discountedTotal} руб.");
-
-        var notificationService = new NotificationService();
-        notificationService.AddNotification(new EmailNotification(customer.Email));
-        notificationService.AddNotification(new SmsNotification(customer.Phone));
-
-        order.ProcessOrder();
-
-        notificationService.SendAll($"Ваш заказ на сумму {discountedTotal} руб. обработан и будет доставлен!");
-
-        Console.WriteLine("\n--- Добавляем новый способ оплаты (OCP в действии) ---");
-
-        order.Payment = new BankTransferPayment();
-        order.ProcessOrder();
+        OrderService service = new OrderService(notification, discountCalculator);
+        service.ProcessOrder(order);
     }
 }
+

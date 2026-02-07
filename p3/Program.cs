@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-#region Order
-
-// SRP: класс отвечает только за данные и логику заказа
 class Order
 {
     private List<OrderItem> items = new List<OrderItem>();
@@ -48,17 +45,11 @@ class OrderItem
     }
 }
 
-#endregion
-
-#region Payment
-
-// DIP + ISP
 interface IPayment
 {
     void ProcessPayment(double amount);
 }
 
-// LSP: любой способ оплаты можно подставить вместо IPayment
 class CreditCardPayment : IPayment
 {
     public void ProcessPayment(double amount)
@@ -83,11 +74,6 @@ class BankTransferPayment : IPayment
     }
 }
 
-#endregion
-
-#region Delivery
-
-// DIP + ISP
 interface IDelivery
 {
     void DeliverOrder(Order order);
@@ -117,11 +103,6 @@ class PickUpPointDelivery : IDelivery
     }
 }
 
-#endregion
-
-#region Notification
-
-// ISP
 interface INotification
 {
     void SendNotification(string message);
@@ -143,11 +124,6 @@ class SmsNotification : INotification
     }
 }
 
-#endregion
-
-#region Discount
-
-// OCP: новые скидки добавляются через новые классы
 interface IDiscountRule
 {
     double Apply(double total);
@@ -157,7 +133,7 @@ class PercentageDiscount : IDiscountRule
 {
     public double Apply(double total)
     {
-        return total * 0.9; // 10% скидка
+        return total * 0.9;
     }
 }
 
@@ -169,7 +145,6 @@ class FixedDiscount : IDiscountRule
     }
 }
 
-// SRP: только расчет скидок
 class DiscountCalculator
 {
     private List<IDiscountRule> rules = new List<IDiscountRule>();
@@ -192,11 +167,6 @@ class DiscountCalculator
     }
 }
 
-#endregion
-
-#region Service
-
-// DIP: зависит только от интерфейсов
 class OrderService
 {
     private readonly INotification notification;
@@ -220,15 +190,14 @@ class OrderService
     }
 }
 
-
 class Program
 {
     static void Main()
     {
         Order order = new Order();
 
-        order.AddItem("Ноутбук", 1, 300000);
-        order.AddItem("Мышь", 1, 5000);
+        order.AddItem("Смартфон", 1, 180000);
+        order.AddItem("Беспроводные наушники", 1, 25000);
 
         order.Payment = new CreditCardPayment();
         order.Delivery = new CourierDelivery();
@@ -242,4 +211,3 @@ class Program
         service.ProcessOrder(order);
     }
 }
-

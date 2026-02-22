@@ -1,0 +1,15 @@
+C:\work\p5\bin\Debug\net10.0\p5.exe
+C:\work\p5\bin\Debug\net10.0\p5.deps.json
+C:\work\p5\bin\Debug\net10.0\p5.runtimeconfig.json
+C:\work\p5\bin\Debug\net10.0\p5.dll
+C:\work\p5\bin\Debug\net10.0\p5.pdb
+C:\work\p5\obj\Debug\net10.0\p5.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\p5\obj\Debug\net10.0\p5.AssemblyInfoInputs.cache
+C:\work\p5\obj\Debug\net10.0\p5.AssemblyInfo.cs
+C:\work\p5\obj\Debug\net10.0\p5.csproj.CoreCompileInputs.cache
+C:\work\p5\obj\Debug\net10.0\p5.sourcelink.json
+C:\work\p5\obj\Debug\net10.0\p5.dll
+C:\work\p5\obj\Debug\net10.0\refint\p5.dll
+C:\work\p5\obj\Debug\net10.0\p5.pdb
+C:\work\p5\obj\Debug\net10.0\p5.genruntimeconfig.cache
+C:\work\p5\obj\Debug\net10.0\ref\p5.dll

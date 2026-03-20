@@ -1,0 +1,15 @@
+C:\work\Homework8\bin\Debug\net10.0\Homework8.exe
+C:\work\Homework8\bin\Debug\net10.0\Homework8.deps.json
+C:\work\Homework8\bin\Debug\net10.0\Homework8.runtimeconfig.json
+C:\work\Homework8\bin\Debug\net10.0\Homework8.dll
+C:\work\Homework8\bin\Debug\net10.0\Homework8.pdb
+C:\work\Homework8\obj\Debug\net10.0\Homework8.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\Homework8\obj\Debug\net10.0\Homework8.AssemblyInfoInputs.cache
+C:\work\Homework8\obj\Debug\net10.0\Homework8.AssemblyInfo.cs
+C:\work\Homework8\obj\Debug\net10.0\Homework8.csproj.CoreCompileInputs.cache
+C:\work\Homework8\obj\Debug\net10.0\Homework8.sourcelink.json
+C:\work\Homework8\obj\Debug\net10.0\Homework8.dll
+C:\work\Homework8\obj\Debug\net10.0\refint\Homework8.dll
+C:\work\Homework8\obj\Debug\net10.0\Homework8.pdb
+C:\work\Homework8\obj\Debug\net10.0\Homework8.genruntimeconfig.cache
+C:\work\Homework8\obj\Debug\net10.0\ref\Homework8.dll

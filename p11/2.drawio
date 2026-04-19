@@ -1,0 +1,199 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.0.0">
+  <diagram name="Banking Component Diagram" id="banking">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Frontend -->
+        <mxCell id="2" value="Frontend" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Web Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="2">
+          <mxGeometry x="20" y="40" width="160" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Mobile Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="2">
+          <mxGeometry x="20" y="75" width="160" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend -->
+        <mxCell id="5" value="Backend" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Server Logic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="5">
+          <mxGeometry x="20" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Database -->
+        <mxCell id="7" value="Database" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="SQL Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="7">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Auth Service -->
+        <mxCell id="9" value="Auth Service" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="Authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="9">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Payment Gateway -->
+        <mxCell id="11" value="Payment Gateway" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="640" y="220" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="Payment Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="11">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Notification System -->
+        <mxCell id="13" value="Notification System" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="SMS / Email Sender" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="13">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Analytics Module -->
+        <mxCell id="15" value="Analytics Module" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="340" y="400" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="Reports &amp; Statistics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="15">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Monitoring System -->
+        <mxCell id="17" value="Monitoring System" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="Health Check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="17">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- External Systems -->
+        <mxCell id="19" value="External Bank" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#f9f7ed;strokeColor=#d6b656;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="220" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="Bank API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#d6b656;dashed=1;" vertex="1" parent="19">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- SMS/Email Provider -->
+        <mxCell id="21" value="SMS/Email Provider" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#f9f7ed;strokeColor=#d6b656;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="400" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="External API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#d6b656;dashed=1;" vertex="1" parent="21">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <!-- Frontend -> Backend: REST API -->
+        <mxCell id="23" value="«REST API»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="2" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="100" as="sourcePoint"/>
+            <mxPoint x="340" y="100" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Backend -> Database: SQL -->
+        <mxCell id="24" value="«SQL»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="100" as="sourcePoint"/>
+            <mxPoint x="640" y="100" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Backend -> Auth Service: Token Auth -->
+        <mxCell id="25" value="«Token Auth»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5" target="9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="160" as="sourcePoint"/>
+            <mxPoint x="440" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Backend -> Payment Gateway -->
+        <mxCell id="26" value="«Internal API»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5" target="11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="160" as="sourcePoint"/>
+            <mxPoint x="740" y="220" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="600" y="160"/>
+              <mxPoint x="600" y="200"/>
+              <mxPoint x="740" y="200"/>
+              <mxPoint x="740" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Backend -> Notification -->
+        <mxCell id="27" value="«Internal API»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5" target="13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="160" as="sourcePoint"/>
+            <mxPoint x="140" y="400" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="200" y="160"/>
+              <mxPoint x="200" y="350"/>
+              <mxPoint x="140" y="350"/>
+              <mxPoint x="140" y="400"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Backend -> Analytics -->
+        <mxCell id="28" value="«Internal API»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5" target="15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="160" as="sourcePoint"/>
+            <mxPoint x="440" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Backend -> Monitoring -->
+        <mxCell id="29" value="«Metrics»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;dashed=1;" edge="1" parent="1" source="5" target="17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="160" as="sourcePoint"/>
+            <mxPoint x="740" y="400" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="600" y="160"/>
+              <mxPoint x="600" y="350"/>
+              <mxPoint x="740" y="350"/>
+              <mxPoint x="740" y="400"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Payment Gateway -> External Bank -->
+        <mxCell id="30" value="«External API»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;" edge="1" parent="1" source="11" target="19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="270" as="sourcePoint"/>
+            <mxPoint x="900" y="270" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Notification -> SMS/Email Provider -->
+        <mxCell id="31" value="«External API»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;" edge="1" parent="1" source="13" target="21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="450" as="sourcePoint"/>
+            <mxPoint x="900" y="450" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Analytics -> Database -->
+        <mxCell id="32" value="«SQL»" style="endArrow=open;html=1;rounded=0;endFill=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;dashed=1;" edge="1" parent="1" source="15" target="7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="450" as="sourcePoint"/>
+            <mxPoint x="740" y="140" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="600" y="450"/>
+              <mxPoint x="600" y="300"/>
+              <mxPoint x="740" y="300"/>
+              <mxPoint x="740" y="140"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

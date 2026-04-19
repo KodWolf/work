@@ -1,0 +1,224 @@
+<mxfile host="app.diagrams.net" agent="Draw.io" pages="2">
+  <diagram name="1. Диаграмма классов - Университет" id="university">
+    <mxGraphModel dx="1717" dy="937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="User" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Пользователь (abstract)" vertex="1">
+          <mxGeometry height="100" width="180" x="30" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="User-attrs" parent="User" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- id: int&#xa;- имя: string&#xa;- email: string&#xa;- пароль: string" vertex="1">
+          <mxGeometry height="70" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Student" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="Студент" vertex="1">
+          <mxGeometry height="110" width="180" x="30" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Student-attrs" parent="Student" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- номерЗачетки: string&#xa;- списокКурсов: List&lt;Курс&gt;" vertex="1">
+          <mxGeometry height="35" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Student-methods" parent="Student" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="+ зарегистрироватьсяНаКурс()&#xa;+ просмотретьОценки()" vertex="1">
+          <mxGeometry height="45" width="180" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="Teacher" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="Преподаватель" vertex="1">
+          <mxGeometry height="120" width="180" x="30" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Teacher-attrs" parent="Teacher" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- должность: string&#xa;- списокКурсов: List&lt;Курс&gt;" vertex="1">
+          <mxGeometry height="35" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Teacher-methods" parent="Teacher" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="+ провестиЗанятие()&#xa;+ выставитьОценку()" vertex="1">
+          <mxGeometry height="55" width="180" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="Admin" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="Администратор" vertex="1">
+          <mxGeometry height="120" width="180" x="30" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Admin-attrs" parent="Admin" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- уровеньДоступа: string" vertex="1">
+          <mxGeometry height="25" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Admin-methods" parent="Admin" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="+ управлятьФакультетами()&#xa;+ управлятьПользователями()" vertex="1">
+          <mxGeometry height="65" width="180" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="inherit-s" edge="1" parent="1" source="Student" style="endArrow=block;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#9673a6;" target="User" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inherit-t" edge="1" parent="1" source="Teacher" style="endArrow=block;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#9673a6;" target="User" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inherit-a" edge="1" parent="1" source="Admin" style="endArrow=block;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#9673a6;" target="User" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="University" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Университет" vertex="1">
+          <mxGeometry height="80" width="200" x="350" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="University-attrs" parent="University" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- название: string&#xa;- адрес: string&#xa;- списокФакультетов: List&lt;Факультет&gt;" vertex="1">
+          <mxGeometry height="50" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Faculty" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Факультет" vertex="1">
+          <mxGeometry height="70" width="200" x="350" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Faculty-attrs" parent="Faculty" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- название: string&#xa;- списокКафедр: List&lt;Кафедра&gt;" vertex="1">
+          <mxGeometry height="40" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Department" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Кафедра" vertex="1">
+          <mxGeometry height="80" width="200" x="350" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Department-attrs" parent="Department" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- название: string&#xa;- списокПреподавателей: List&lt;Преподаватель&gt;&#xa;- списокКурсов: List&lt;Курс&gt;" vertex="1">
+          <mxGeometry height="50" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-uf" edge="1" parent="1" source="University" style="endArrow=diamond;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#d79b00;fontSize=10;" target="Faculty" value="композиция">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-fd" edge="1" parent="1" source="Faculty" style="endArrow=diamond;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#d79b00;fontSize=10;" target="Department" value="композиция">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="agg-dt" edge="1" parent="1" source="Department" style="endArrow=diamond;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#82b366;fontSize=10;" target="Teacher" value="агрегация">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="340" />
+              <mxPoint x="210" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Course" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" value="Курс" vertex="1">
+          <mxGeometry height="120" width="200" x="680" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Course-attrs" parent="Course" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- название: string&#xa;- кафедра: Кафедра&#xa;- списокСтудентов: List&lt;Студент&gt;&#xa;- преподаватели: List&lt;Преподаватель&gt;" vertex="1">
+          <mxGeometry height="50" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Course-methods" parent="Course" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="+ добавитьСтудента()&#xa;+ удалитьСтудента()" vertex="1">
+          <mxGeometry height="40" width="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Schedule" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" value="Расписание" vertex="1">
+          <mxGeometry height="70" width="200" x="680" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Schedule-attrs" parent="Schedule" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- дата: Date&#xa;- время: Time&#xa;- аудитория: string" vertex="1">
+          <mxGeometry height="40" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Exam" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" value="Экзамен" vertex="1">
+          <mxGeometry height="70" width="200" x="680" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Exam-attrs" parent="Exam" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- курс: Курс&#xa;- дата: Date" vertex="1">
+          <mxGeometry height="40" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Grade" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" value="Оценка" vertex="1">
+          <mxGeometry height="90" width="200" x="680" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Grade-attrs" parent="Grade" style="text;stroke=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];fontSize=11;" value="- значение: int&#xa;- студент: Студент&#xa;- экзамен: Экзамен" vertex="1">
+          <mxGeometry height="60" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-dc" edge="1" parent="1" source="Department" style="endArrow=open;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#666;fontSize=10;" target="Course" value="1 закреплен">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="340" />
+              <mxPoint x="600" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-ct" edge="1" parent="1" source="Course" style="endArrow=open;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#666;fontSize=10;" target="Teacher" value="1..* ведет">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="80" />
+              <mxPoint x="600" y="345" />
+              <mxPoint x="210" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-cs" edge="1" parent="1" source="Course" style="endArrow=open;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#666;fontSize=10;" target="Student" value="1..* учится">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="80" />
+              <mxPoint x="600" y="205" />
+              <mxPoint x="210" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assoc-sc" edge="1" parent="1" source="Schedule" style="endArrow=open;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#666;fontSize=10;" target="Course" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc-eg" edge="1" parent="1" source="Exam" style="endArrow=open;endFill=0;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;strokeColor=#666;fontSize=10;" target="Grade" value="1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Диаграмма компонентов - Банкинг" id="banking">
+    <mxGraphModel dx="1300" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="800">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Frontend -->
+        <mxCell id="Web" value="Web-приложение" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Mobile" value="Мобильное приложение" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="150" height="50" as="geometry" />
+        </mxCell>
+        <!-- Backend -->
+        <mxCell id="Backend" value="Backend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="160" height="50" as="geometry" />
+        </mxCell>
+        <!-- База данных -->
+        <mxCell id="DB" value="База данных" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="560" y="50" width="120" height="70" as="geometry" />
+        </mxCell>
+        <!-- Auth -->
+        <mxCell id="Auth" value="Auth Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="150" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- Payment -->
+        <mxCell id="Payment" value="Payment Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="240" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- Notification -->
+        <mxCell id="Notify" value="Уведомления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="160" height="50" as="geometry" />
+        </mxCell>
+        <!-- Analytics -->
+        <mxCell id="Analytics" value="Аналитика" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="330" width="160" height="50" as="geometry" />
+        </mxCell>
+        <!-- Monitoring -->
+        <mxCell id="Monitor" value="Мониторинг" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="560" y="340" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- Внешний банк -->
+        <mxCell id="ExtBank" value="Внешний банк" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666;" vertex="1" parent="1">
+          <mxGeometry x="780" y="240" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- Интерфейсы -->
+        <mxCell id="rest-web" value="REST API" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Web" target="Backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rest-mob" value="REST API" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Mobile" target="Backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="db-conn" value="SQL" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Backend" target="DB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="auth-conn" value="JWT" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Backend" target="Auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-conn" value="Payment API" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Backend" target="Payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="notify-conn" value="SMTP/SMS" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Backend" target="Notify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics-conn" value="Events" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;" edge="1" parent="1" source="Backend" target="Analytics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mon-conn" value="Health" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="Monitor" target="Backend">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="410" />
+              <mxPoint x="380" y="410" />
+              <mxPoint x="380" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ext-conn" value="External API" style="endArrow=none;html=1;rounded=0;startArrow=circle;startFill=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="Payment" target="ExtBank">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

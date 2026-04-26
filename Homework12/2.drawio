@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Sequence - Бронирование (Полная версия)">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="L1" value="Клиент" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;" vertex="1" parent="1"><mxGeometry x="10" y="40" width="100" height="920" as="geometry" /></mxCell>
+        <mxCell id="L2" value="Система" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;" vertex="1" parent="1"><mxGeometry x="160" y="40" width="100" height="920" as="geometry" /></mxCell>
+        <mxCell id="L3" value="Плат. шлюз" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;" vertex="1" parent="1"><mxGeometry x="310" y="40" width="100" height="920" as="geometry" /></mxCell>
+        <mxCell id="L4" value="Админ" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;" vertex="1" parent="1"><mxGeometry x="460" y="40" width="100" height="920" as="geometry" /></mxCell>
+        <mxCell id="L5" value="Подрядчики" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;" vertex="1" parent="1"><mxGeometry x="610" y="40" width="100" height="920" as="geometry" /></mxCell>
+        <mxCell id="L6" value="Менеджер" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;collapsible=0;" vertex="1" parent="1"><mxGeometry x="760" y="40" width="100" height="920" as="geometry" /></mxCell>
+
+        <mxCell id="m1" value="Запрос доступности" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L1" target="L2"><mxGeometry relative="1" as="geometry"><mxPoint y="100" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m2" value="Запрос статуса площадки" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L2" target="L4"><mxGeometry relative="1" as="geometry"><mxPoint y="120" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m3" value="Площадка свободна" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L4" target="L2"><mxGeometry relative="1" as="geometry"><mxPoint y="150" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m4" value="Подтверждение доступности" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L2" target="L1"><mxGeometry relative="1" as="geometry"><mxPoint y="170" as="offset" /></mxGeometry></mxCell>
+
+        <mxCell id="m5" value="Инициировать оплату" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L1" target="L2"><mxGeometry relative="1" as="geometry"><mxPoint y="210" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m6" value="Запрос транзакции" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L2" target="L3"><mxGeometry relative="1" as="geometry"><mxPoint y="230" as="offset" /></mxGeometry></mxCell>
+        
+        <mxCell id="f1" value="alt: Проверка платежа" style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=30;" vertex="1" parent="1"><mxGeometry x="20" y="250" width="410" height="150" as="geometry" /></mxCell>
+        <mxCell id="m7" value="Платеж успешен" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L3" target="L2"><mxGeometry relative="1" as="geometry"><mxPoint y="290" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m8" value="Бронирование подтверждено" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L2" target="L1"><mxGeometry relative="1" as="geometry"><mxPoint y="310" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="sep1" value="" style="line;strokeWidth=1;dashed=1;html=1;" vertex="1" parent="1"><mxGeometry x="20" y="330" width="410" height="10" as="geometry" /></mxCell>
+        <mxCell id="m9" value="Ошибка оплаты" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L3" target="L1"><mxGeometry relative="1" as="geometry"><mxPoint y="360" as="offset" /></mxGeometry></mxCell>
+
+        <mxCell id="m10" value="Уведомление о бронировании" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L2" target="L4"><mxGeometry relative="1" as="geometry"><mxPoint y="430" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="f2" value="par: Подготовка площадки" style="shape=umlFrame;whiteSpace=wrap;html=1;width=160;height=30;" vertex="1" parent="1"><mxGeometry x="470" y="460" width="220" height="180" as="geometry" /></mxCell>
+        <mxCell id="m11" value="Задание: Декор" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L4" target="L5"><mxGeometry relative="1" as="geometry"><mxPoint y="500" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m12" value="Задание: Еда" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L4" target="L5"><mxGeometry relative="1" as="geometry"><mxPoint y="540" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m13" value="Задачи выполнены" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L5" target="L4"><mxGeometry relative="1" as="geometry"><mxPoint y="600" as="offset" /></mxGeometry></mxCell>
+
+        <mxCell id="m14" value="Отчет по мероприятию" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L4" target="L2"><mxGeometry relative="1" as="geometry"><mxPoint y="670" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m15" value="Просьба оценить сервис" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L2" target="L1"><mxGeometry relative="1" as="geometry"><mxPoint y="720" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m16" value="Отзыв клиента" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;" edge="1" parent="1" source="L1" target="L2"><mxGeometry relative="1" as="geometry"><mxPoint y="760" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="m17" value="Финальный отчет" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="L2" target="L6"><mxGeometry relative="1" as="geometry"><mxPoint y="820" as="offset" /></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="1. Activity - Наем">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p_hiring" value="Процесс найма сотрудников" style="swimlane;html=1;childLayout=stackLayout;startSize=20;horizontal=0;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1050" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="Руководитель" style="swimlane;html=1;startSize=20;" vertex="1" parent="p_hiring"><mxGeometry x="20" y="0" width="200" height="980" as="geometry" /></mxCell>
+        <mxCell id="st" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;" vertex="1" parent="l1"><mxGeometry x="85" y="40" width="30" height="30" as="geometry" /></mxCell>
+        <mxCell id="a1" value="Создание заявки" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="40" y="100" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="a_fix" value="Доработка заявки" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="40" y="200" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="a_tech" value="Техническое интервью" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="40" y="650" width="120" height="50" as="geometry" /></mxCell>
+        
+        <mxCell id="l2" value="HR-отдел" style="swimlane;html=1;startSize=20;" vertex="1" parent="p_hiring"><mxGeometry x="220" y="0" width="230" height="980" as="geometry" /></mxCell>
+        <mxCell id="d1" value="Одобрено?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="75" y="85" width="80" height="80" as="geometry" /></mxCell>
+        <mxCell id="fork1" value="" style="line;strokeWidth=6;html=1;fillColor=#000000;" vertex="1" parent="l2"><mxGeometry x="30" y="220" width="170" height="10" as="geometry" /></mxCell>
+        <mxCell id="a_pub" value="Публикация вакансии" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="55" y="260" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="d2" value="Подходит?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="75" y="450" width="80" height="80" as="geometry" /></mxCell>
+        <mxCell id="a_rej1" value="Отказ кандидату" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="l2"><mxGeometry x="145" y="465" width="100" height="50" as="geometry" /></mxCell>
+        <mxCell id="a_hr_int" value="Первичное интервью" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="55" y="570" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="d3" value="Успешно?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="75" y="720" width="80" height="80" as="geometry" /></mxCell>
+        <mxCell id="a_rej2" value="Отказ (провал)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="l2"><mxGeometry x="145" y="735" width="100" height="50" as="geometry" /></mxCell>
+        <mxCell id="a_off_send" value="Отправка оффера" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="55" y="830" width="120" height="50" as="geometry" /></mxCell>
+        
+        <mxCell id="l3" value="Кандидат" style="swimlane;html=1;startSize=20;" vertex="1" parent="p_hiring"><mxGeometry x="450" y="0" width="200" height="980" as="geometry" /></mxCell>
+        <mxCell id="a_app" value="Подача заявки" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l3"><mxGeometry x="40" y="350" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="a_conf" value="Подтверждение оффера" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l3"><mxGeometry x="40" y="830" width="120" height="50" as="geometry" /></mxCell>
+        
+        <mxCell id="l4" value="Система" style="swimlane;html=1;startSize=20;" vertex="1" parent="p_hiring"><mxGeometry x="650" y="0" width="180" height="980" as="geometry" /></mxCell>
+        <mxCell id="a_db" value="Добавление в БД" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l4"><mxGeometry x="30" y="900" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="ed" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;" vertex="1" parent="l4"><mxGeometry x="75" y="940" width="30" height="30" as="geometry" /></mxCell>
+
+        <mxCell id="e1" edge="1" parent="p_hiring" source="st" target="a1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" edge="1" parent="p_hiring" source="a1" target="d1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="Да" edge="1" parent="p_hiring" source="d1" target="fork1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" value="Нет" edge="1" parent="p_hiring" source="d1" target="a_fix"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" edge="1" parent="p_hiring" source="fork1" target="a_pub"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" edge="1" parent="p_hiring" source="fork1" target="a_app"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" edge="1" parent="p_hiring" source="a_app" target="d2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="Да" edge="1" parent="p_hiring" source="d2" target="a_hr_int"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" value="Нет" edge="1" parent="p_hiring" source="d2" target="a_rej1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" edge="1" parent="p_hiring" source="a_hr_int" target="a_tech"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" edge="1" parent="p_hiring" source="a_tech" target="d3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" value="Да" edge="1" parent="p_hiring" source="d3" target="a_off_send"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" value="Нет" edge="1" parent="p_hiring" source="d3" target="a_rej2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e14" edge="1" parent="p_hiring" source="a_off_send" target="a_conf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e15" edge="1" parent="p_hiring" source="a_conf" target="a_db"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e16" edge="1" parent="p_hiring" source="a_db" target="ed"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="2. Sequence - Бронирование">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S1" value="Клиент" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="1"><mxGeometry x="20" y="40" width="100" height="850" as="geometry" /></mxCell>
+        <mxCell id="S2" value="Система" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="1"><mxGeometry x="160" y="40" width="100" height="850" as="geometry" /></mxCell>
+        <mxCell id="S3" value="Админ" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="1"><mxGeometry x="300" y="40" width="100" height="850" as="geometry" /></mxCell>
+        <mxCell id="S4" value="Банк" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="1"><mxGeometry x="440" y="40" width="100" height="850" as="geometry" /></mxCell>
+        <mxCell id="S5" value="Подрядчики" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="1"><mxGeometry x="580" y="40" width="100" height="850" as="geometry" /></mxCell>
+        <mxCell id="S6" value="Менеджер" style="shape=umlLifeline;whiteSpace=wrap;html=1;container=1;" vertex="1" parent="1"><mxGeometry x="720" y="40" width="100" height="850" as="geometry" /></mxCell>
+        
+        <mxCell id="m1" value="Запрос доступности" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="S1" target="S2"><mxGeometry relative="1" as="geometry"><mxPoint y="100" as="offset" /></mxGeometry></mxCell>
+        <mxCell id="alt1" value="alt: Доступность" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;" vertex="1" parent="1"><mxGeometry x="10" y="140" width="370" height="110" as="geometry" /></mxCell>
+        <mxCell id="alt2" value="alt: Оплата" style="shape=umlFrame;whiteSpace=wrap;html=1;width=100;height=30;" vertex="1" parent="1"><mxGeometry x="10" y="270" width="510" height="120" as="geometry" /></mxCell>
+        <mxCell id="par1" value="par: Работа подрядчиков" style="shape=umlFrame;whiteSpace=wrap;html=1;width=160;height=30;" vertex="1" parent="1"><mxGeometry x="150" y="430" width="540" height="180" as="geometry" /></mxCell>
+        <mxCell id="m_tsk1" value="Задача: Еда" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="S3" target="S5"><mxGeometry relative="1" as="geometry"><mxPoint x="350" y="470" as="sourcePoint" /><mxPoint x="630" y="470" as="targetPoint" /></mxGeometry></mxCell>
+        <mxCell id="m_tsk2" value="Задача: Декор" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="S3" target="S5"><mxGeometry relative="1" as="geometry"><mxPoint x="350" y="530" as="sourcePoint" /><mxPoint x="630" y="530" as="targetPoint" /></mxGeometry></mxCell>
+        <mxCell id="m_rpt" value="Финальный отчет" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="S2" target="S6"><mxGeometry relative="1" as="geometry"><mxPoint x="210" y="700" as="sourcePoint" /><mxPoint x="770" y="700" as="targetPoint" /></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
